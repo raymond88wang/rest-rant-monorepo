@@ -10,8 +10,10 @@ orbs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-    example-workflow:
+    elastic-beanstalk-workflow:
       jobs:
         - aws-elastic-beanstalk/deploy:
-            app-dir: backend 
-            application-name: rest-rant 
+            app-dir: ~/backend
+            context: aws-creds
+            application-name: rest-rant
+            environment-name: Testing-env
