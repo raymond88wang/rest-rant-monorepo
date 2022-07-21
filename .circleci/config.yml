@@ -15,5 +15,5 @@ workflows:
         - aws-elastic-beanstalk/deploy:
             app-dir: ~/backend
             context: aws-creds
-            application-name: rest-rant
+            application-name: Testing
             environment-name: Testing-env
